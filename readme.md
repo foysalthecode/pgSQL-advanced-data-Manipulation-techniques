@@ -53,3 +53,19 @@
 
 > select * from students where grade = 'A'
 
+## select student from nepal or from bangladesh 
+
+> select * from students where country = "nepal" or country = "Bangladesh"
+
+## select students with grade "A" or "B" in mathematics or physics
+
+> select * from students where (grade = "A" or grade = "B") and (course = "mathematics" or course = "physics")
+
+# AND Operator
+<!-- select students from nepal where the age is 20 -->
+
+> select * from students where country = "Nepal" and age = 20
+
+## select students from the nepal or from Bangladesh and the age is 20
+
+> select * from students where (country = "Nepal" or country = "Bangladesh") and age = 20
