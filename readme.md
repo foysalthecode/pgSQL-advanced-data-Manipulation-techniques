@@ -17,7 +17,7 @@
 > The SELECT statement is used to retrieve data from one or more tables and can be customized with conditions, sorting, and other clauses.
 
     GROUP
-    JOIN 
+    JOIN
     SELECT
     ORDER
     FROM
@@ -28,14 +28,28 @@
     LIMIT
 
 ## using select
+
     1 select first_name from students
     2 select first_name,age from students
     3 select * from students
 
 ## column alias
-    > select first_name as "First Name" from students;
+
+> select first_name as "First Name" from students;
 
 ## sorting
-    select first_name,blood_group,country,age from students order by age desc
 
+> select first_name,blood_group,country,age from students order by age desc
+
+## Distinct (find the unique value or keyword)
+
+> select distinct course from students
+
+## Filtering --> Operator and select students from the thailand
+
+> select * from students where country = 'thailand'
+
+## select students with 'A' grade in physics
+
+> select * from students where grade = 'A'
 
