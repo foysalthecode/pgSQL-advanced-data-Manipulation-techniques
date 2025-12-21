@@ -81,11 +81,14 @@
 ## serve all data except nepal
 
     select * from students where country != "Nepal"
+
 <!-- we can use <> this instead of != -->
+
     select * from students where country <> "Nepal"
 
-## select student whose age is between 20 and 22  
-    select * from student where age between 20 and 22 
+## select student whose age is between 20 and 22
+
+    select * from student where age between 20 and 22
 
     select distinct age from students
 
@@ -93,30 +96,49 @@
 
 <!-- > select * from students where country = "Bangladesh" or country = "India" or country = "Nepal" -->
 
-    select * from students in (bangladesh,india,nepal) 
+    select * from students in (bangladesh,india,nepal)
 
 ## select students whose first name starts with "A" --> Like operator (case sensitive)
 
     select * from students where first_name like "A%"  --> % means every letter after "A"
-    
+
     select * from students where first_name like "M---"  --> _ underscoe means every letter after "A"
-    
+
     select * from students where first_name like "%a_"
 
     <!-- one underscore means one character and % means every character after % -->
 
 ## Ilike (case insensitive)
-    
+
     select * from students where email Ilike "%a"
 
 ## select students whose last name end with "n"
 
     select * from students where last_name like "%n"
 
+# NOT
 
+<!-- SELECT students who are not from bangladesh -->
 
+    select * from students where not country = "Bangladesh"
 
+<!-- SELECT students whose grade is not "A" -->
 
+    select * from students where not grade = "A"
 
+## scaler function (upper,lower,concat,length)
 
+    select upper(first_name) from students
 
+<!-- this upper function makes every letter capital -->
+
+    select concat(first_name,last_name) as "Full Name" from students
+
+## aggregate function (avg,max,min,sum,count)
+
+    select avg(age) as avg_age from students ---> get the avg age
+    select max(age) max_age from students ---> get the max age
+    select min(age) min_age from students ---> get the min age
+    select sum(age) sum_of_age from students --> get the total sum age 
+    select count(name) from students --> get how many name there 
+    select count(*) from students --> get how many rows there 
