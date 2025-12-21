@@ -95,5 +95,28 @@
 
     select * from students in (bangladesh,india,nepal) 
 
+## select students whose first name starts with "A" --> Like operator (case sensitive)
+
+    select * from students where first_name like "A%"  --> % means every letter after "A"
+    
+    select * from students where first_name like "M---"  --> _ underscoe means every letter after "A"
+    
+    select * from students where first_name like "%a_"
+
+    <!-- one underscore means one character and % means every character after % -->
+
+## Ilike (case insensitive)
+    
+    select * from students where email Ilike "%a"
+
+## select students whose last name end with "n"
+
+    select * from students where last_name like "%n"
+
+
+
+
+
+
 
 
